@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  user: one
+  country: MyString
+  photo: MyString
+  video: MyString
+  public: false
+  views: 1
+
+two:
+  description: MyText
+  user: two
+  country: MyString
+  photo: MyString
+  video: MyString
+  public: false
+  views: 1

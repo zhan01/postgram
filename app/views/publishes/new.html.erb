@@ -1,0 +1,18 @@
+<div class="jumbotron jumbotron-fluid" style='background-color: #61c0bf ; height: 100%; '>
+
+    <div class = "container" style="width: 700px; margin-top: 80px;" >
+    	<div class="card border shadow-lg">
+    	<h5 class="card-header text-dark" style="background-color: #C8C8C8;">New Publish</h5>
+    		<div class="p-3">
+        <p style="color:#8b8989"></p>
+
+        <%= render partial: '/publishes/form', object: @publish %>
+        </div>
+        <div class="form-actions my-3 d-flex justify-content-end">
+
+                <%= link_to 'Back', publishes_path ,class: "btn btn-dark" %>
+        </div>
+    </div>
+</div>
+
+</div>

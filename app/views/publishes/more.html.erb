@@ -1,0 +1,46 @@
+<div class="jumbotron jumbotron-fluid" style='background-color: #e9e8e6'></div>
+<div class="container1" style="
+    margin-top: -542px;" >
+    <div style=" padding: 40px;">
+        <h1>Posts</h1>
+
+        <%= form_tag(more_publishes_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+        <%= submit_tag "Search" ,  class:'btn btn-dark p-1' %>
+        <% end %>
+        
+        </br>
+        
+    <%= link_to 'New Post', new_publish_path , class:'btn btn-dark p-1' %>
+
+  
+    </div>
+    
+    <div class="row shadow-lg p-3 mb-5 bg-white rounded "style="padding:70px;">
+
+          <% @publishes.each do |publish| %>
+              <div class="col-4">
+                  <div class="card mb-5">
+                 <iframe width="auto" height="auto" src="https://www.youtube.com/embed/<%= challenge.after_video %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>			
+                      <div class="card-body">
+                      
+                         
+                          <div class="d-flex flex-inline-block">
+                          <%= link_to image_tag(publish.user.avatar.url, class:'img-fluid' ,style:'width: 30px; border-radius: 50%'), user_path(publish.user_id) %> <p><%= publish.user.username %></p>
+                          </br>
+                          </div>
+                             <%= link_to "Check ", "/publishes/#{publish.id}", class:'btn btn-dark p-1'%>
+                        
+                      </div>
+                  </div>
+              </div>
+              
+          <% end %>
+         
+      </div>
+
+
+  <br><hr>
+  
+       
+  

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+admin_user:
+  name: Zhanat
+  email: zhunussov@gmail.com
+  role: 'admin'
+  password_digest: '12345678'
+
+regular_user:
+  name: Normal User
+  email: normal@gmail.com
+  role: 'user'
+  password_digest: MyString
